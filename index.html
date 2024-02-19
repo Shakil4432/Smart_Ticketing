@@ -14,9 +14,10 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="relative max-w-6xl m-auto">
+    <header id="header_section" class=" relative max-w-6xl m-auto p-5 lg:p-0">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
@@ -40,15 +41,13 @@
               tabindex="0"
               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li><a>Item 1</a></li>
+              <li><a>Home</a></li>
               <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
+                <a>About</a>
+                
               </li>
-              <li><a>Item 3</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
             </ul>
           </div>
           <a class="btn btn-ghost text-2xl font-bold">E-Ticket</a>
@@ -90,29 +89,47 @@
               Yes, you can run unit tests and view the results directly within
               the app. The integrated testing features allow for a streamlined .
             </p>
-            <button class="btn btn-primary border-none text-black font-bold bg-[rgb(29,209,0)]">Buy Ticket</button>
-            <div class="banner_card flex gap-10 absolute left-44 top-[90%]">
-              <div class="card1 flex justify-center items-center rounded-lg bg-white w-[45%] gap-5 px-8 py-5 shadow-[green_0px_4px_0px]">
+            <button
+              onclick="moveToBuyTicket()"
+              id="Move_to_ticket_section"
+              class="btn btn-primary border-none text-black font-bold bg-[rgb(29,209,0)]"
+            >
+              Buy Ticket
+            </button>
+            <div class="banner_card flex flex-col lg:flex-row gap-10 absolute left-[13%]  lg:left-[17%] top-[100%] lg:top-[90%]">
+              <div
+                class="card1 flex justify-center items-center rounded-lg bg-white w-[140%] lg:w-[45%] gap-5 lg:px-8 py-5 shadow-[green_0px_4px_0px]"
+              >
                 <div>
-                  <i class="fa-solid fa-users-line text-3xl text-[rgb(29,209,0)]"></i>
+                  <i
+                    class="fa-solid fa-users-line text-3xl text-[rgb(29,209,0)]"
+                  ></i>
                 </div>
                 <div>
                   <h1 class="text-black text-2xl font-bold">500K+</h1>
                   <p class="text-slate-400">Registered Users</p>
                 </div>
               </div>
-              <div class="card2 flex justify-center items-center rounded-lg bg-white w-[45%] gap-5 px-8 py-5 shadow-[green_0px_4px_0px]">
+              <div
+                class="card2 flex justify-center items-center rounded-lg bg-white w-[140%] lg:w-[45%] gap-5 px-8 py-5 shadow-[green_0px_4px_0px]"
+              >
                 <div>
-                  <i class="fa-solid fa-ticket text-3xl text-[rgb(29,209,0)]"></i>
+                  <i
+                    class="fa-solid fa-ticket text-3xl text-[rgb(29,209,0)]"
+                  ></i>
                 </div>
                 <div>
                   <h1 class="text-black text-2xl font-bold">1.7 lacks</h1>
                   <p class="text-slate-400">Ticket Solid</p>
                 </div>
               </div>
-              <div class="card3 flex justify-center items-center rounded-lg bg-white w-[45%] gap-5 px-8 py-5 shadow-[green_0px_4px_0px]">
+              <div
+                class="card3 flex justify-center items-center rounded-lg bg-white w-[140%] lg:w-[45%] gap-5 px-8 py-5 shadow-[green_0px_4px_0px]"
+              >
                 <div>
-                  <i class="fa-solid fa-handshake-simple text-3xl text-[rgb(29,209,0)]"></i>
+                  <i
+                    class="fa-solid fa-handshake-simple text-3xl text-[rgb(29,209,0)]"
+                  ></i>
                 </div>
                 <div>
                   <h1 class="text-black text-2xl font-bold">80K+</h1>
@@ -124,5 +141,358 @@
         </div>
       </div>
     </header>
+    <main id="main_section" class=" max-w-6xl m-auto mt-40 text-center">
+      <section class="section-1 ">
+        <div>
+          <h1 class="text-4xl font-semibold mt-[100%] lg:mt-0 lg:mb-10">Best offers for you</h1>
+        </div>
+        <div
+          class="discount_conatainer mt-12 lg:mt-0 flex flex-col lg:flex-row justify-center items-center gap-10"
+        >
+          <div
+            class="couple_discount lg:w-[40%] bg-[rgb(255,191,15)] flex justify-evenly items-center rounded-lg px-5 gap-5"
+          >
+            <div>
+              <h1 class="text-3xl font-extrabold">15% OFF</h1>
+              <p class="text-lg font-bold">on your next purchase</p>
+              <p class="text-gray-200 font-semibold">use by January 2024</p>
+            </div>
+            <div class="w-[20%] h-[26vh] relative">
+              <img
+                class="h-[26vh] bottom-[5%] top-[0%] left-[32%] absolute"
+                src="images/cupon-devider.png"
+                alt=""
+              />
+            </div>
+
+            <div class="new15 text-center">
+              <h1 class="text-2xl font-bold">NEW15</h1>
+              <p class="text-gray-200 font-semibold">Coupon Code</p>
+            </div>
+          </div>
+          <div
+            class="purchase_discount lg:w-[40%] bg-[rgb(247,140,156)] flex justify-evenly items-center rounded-lg px-5 gap-2"
+          >
+            <div>
+              <h1 class="text-3xl font-extrabold">20% OFF</h1>
+              <p class="text-lg font-bold">on your next purchase</p>
+              <p class="text-gray-200 font-semibold">use by January 2024</p>
+            </div>
+            <div class="w-[20%] h-[26vh] relative">
+              <img
+                class="h-[26vh] bottom-[5%] top-[0%] left-[32%] absolute"
+                src="images/cupon-devider.png"
+                alt=""
+              />
+            </div>
+
+            <div class="new15">
+              <h1 id="couple20" class="text-2xl font-bold">Couple 20</h1>
+              <p class="text-gray-200 font-semibold">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="btn mt-10">
+            <button
+              class="btn btn-secondary bg-white font-bold border-[rgb(29,209,0)] text-[rgb(29,209,0)]"
+            >
+              SEE ALL OFFERS
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="section-2 mt-6 lg:mt-20 p-5 lg:p-0">
+        <div class="text-center w-[80%] m-auto p-10">
+          <h1 class="text-5xl font-bold">K.H Paribahan</h1>
+          <p class="text-gray-400">
+            Yes, you can run unit tests and view the results directly within the
+            app. <br />The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <div
+          class="ticket_container flex flex-col lg:flex-row w-full justify-around gap-5 items-center"
+        >
+          <div>
+            <div
+              class="paribahan_and_ticket flex flex-col lg:flex-row justify-between gap-5 items-center"
+            >
+              <div class="paribahan flex gap-5 justify-center items-center">
+                <img src="images/bus-logo.png" alt="">
+                <div>
+                  <h1 class="text-3xl font-semibold">Greenline Paribahan</h1>
+                  <p class="text-gray-500">Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <div>
+                <button
+                  class="btn text-[rgb(29,209,0)] bg-[rgba(29,209,0,0.15)]"
+                >
+                  <img src="images/seat-green-filled.png" alt=""></i> <span id="total_ticket">40</span>seats left
+                </button>
+              </div>
+            </div>
+            <div class="line_form bg-slate-100 rounded-lg mt-10">
+              <div
+                class="flex justify-between items-center bg-slate-100 p-4 rounded-lg font-bold"
+              >
+                <p>Route</p>
+                <p>Dhaka - Sylhet</p>
+              </div>
+              <div
+                class="flex border-t-2 justify-between items-center bg-slate-100 p-4 rounded-lg font-bold"
+              >
+                <p>Departure Time</p>
+                <p>9:00 PM</p>
+              </div>
+              <div
+                class="flex border-t-2 justify-between items-center gap-10 bg-slate-100 p-4 rounded-lg"
+              >
+                <div class="bg-gray-300 p-3 rounded-lg font-bold">
+                  Boarding Point - Laxmipur
+                </div>
+                <div class="bg-gray-300 p-3 rounded-lg font-bold">
+                  Dropping Point - Bogura
+                </div>
+                <div class="bg-gray-300 p-3 rounded-lg font-bold">
+                  Est. Time - 11 Hour
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <img src="images/info-devider.png" alt="" />
+          </div>
+          <div class="text-center flex flex-col justify-center items-center">
+            <svg
+              width="40.000000"
+              height="40.000294"
+              viewBox="0 0 40 40.0003"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs />
+              <path
+                id="Vector"
+                d="M30 2.67979C33.0404 4.43516 35.5652 6.95994 37.3206 10.0003C39.0759 13.0408 40 16.4897 40 20.0004C40 23.5112 39.0758 26.9601 37.3204 30.0005C35.5649 33.0408 33.0402 35.5656 29.9998 37.3209C26.9594 39.0763 23.5104 40.0004 19.9996 40.0003C16.4889 40.0002 13.04 39.076 9.99963 37.3206C6.95935 35.5652 4.43457 33.0403 2.67932 29.9999C0.92395 26.9595 -0.00012207 23.5105 0 19.9998L0.0100098 19.3518C0.121948 15.8978 1.12708 12.5317 2.92725 9.58177C4.72742 6.63183 7.26135 4.19869 10.2817 2.51955C13.3022 0.840412 16.7063 -0.02742 20.162 0.000659943C23.6177 0.0287437 27.0072 0.951782 30 2.67979ZM17.578 11.4478C17.1038 10.4989 16.272 9.77718 15.2657 9.4415C14.2594 9.10581 13.1609 9.18361 12.212 9.65779L11.106 10.2118C10.6486 10.4585 10.3051 10.8735 10.1483 11.3691C9.9917 11.8646 10.0339 12.4017 10.2665 12.8666C10.4989 13.3314 10.9031 13.6876 11.3936 13.8595C11.884 14.0315 12.4221 14.0057 12.894 13.7878L14 13.2358L13.998 15.9998L12 15.9998C11.5101 15.9999 11.0374 16.1797 10.6713 16.5052C10.3052 16.8307 10.0713 17.2793 10.014 17.7658L10 17.9998C10 18.5302 10.2107 19.0389 10.5858 19.414C10.9608 19.7891 11.4696 19.9998 12 19.9998L13.998 19.9998L14 25.9998C13.9999 27.5302 14.5846 29.0028 15.6345 30.1163C16.6844 31.2298 18.1202 31.9 19.6479 31.9898L20 31.9998L21 31.9998C22.8566 31.9998 24.637 31.2623 25.9497 29.9495C27.2625 28.6368 28 26.8563 28 24.9998L28 23.9998C28 23.4694 27.7893 22.9606 27.4142 22.5856C27.0392 22.2105 26.5304 21.9998 26 21.9998L24 21.9998C23.4696 21.9998 22.9608 22.2105 22.5858 22.5856C22.2107 22.9606 22 23.4694 22 23.9998L22.014 24.2338C22.0667 24.6802 22.2682 25.0959 22.5861 25.4138C22.9039 25.7316 23.3196 25.9331 23.766 25.9858L23.83 25.9898L23.79 26.1038C23.5686 26.6631 23.1842 27.143 22.6868 27.4811C22.1892 27.8192 21.6016 27.9999 21 27.9998L20 27.9998C19.4696 27.9998 18.9608 27.7891 18.5858 27.414C18.2107 27.0389 18 26.5302 18 25.9998L17.998 19.9998L26 19.9998C26.4899 19.9997 26.9626 19.8199 27.3287 19.4944C27.6948 19.1688 27.9287 18.7203 27.986 18.2338L28 17.9998C28 17.4694 27.7893 16.9606 27.4142 16.5856C27.0392 16.2105 26.5304 15.9998 26 15.9998L17.998 15.9998L18 13.2358C18 12.7398 17.9078 12.2481 17.728 11.7858L17.578 11.4478Z"
+                fill="#1DD100"
+                fill-opacity="1.000000"
+                fill-rule="nonzero"
+              />
+              <path
+                id="Vector"
+                d="M37.3206 10.0003C39.0759 13.0408 40 16.4897 40 20.0004C40 23.5112 39.0758 26.9601 37.3204 30.0005C35.5649 33.0408 33.0402 35.5656 29.9998 37.3209C26.9594 39.0763 23.5105 40.0004 19.9996 40.0003C16.4889 40.0002 13.04 39.076 9.99963 37.3206C6.95935 35.5652 4.43457 33.0403 2.67932 29.9999C0.92395 26.9595 -0.00012207 23.5105 0 19.9998L0.0100098 19.3518C0.121948 15.8978 1.12708 12.5317 2.92725 9.58177C4.72742 6.63183 7.26135 4.19869 10.2817 2.51955C13.3022 0.840412 16.7063 -0.02742 20.162 0.000659943C23.6177 0.0287437 27.0072 0.951782 30 2.67979C33.0404 4.43516 35.5652 6.95994 37.3206 10.0003ZM15.2657 9.4415C14.2594 9.10581 13.1609 9.18361 12.212 9.65779L11.106 10.2118C10.6486 10.4585 10.3051 10.8735 10.1483 11.3691C9.9917 11.8646 10.0339 12.4017 10.2665 12.8666C10.4989 13.3314 10.9031 13.6876 11.3936 13.8595C11.884 14.0315 12.4221 14.0057 12.894 13.7878L14 13.2358L13.998 15.9998L12 15.9998C11.5101 15.9999 11.0374 16.1797 10.6713 16.5052C10.3052 16.8307 10.0713 17.2793 10.014 17.7658L10 17.9998C10 18.5302 10.2107 19.0389 10.5858 19.414C10.9608 19.7891 11.4696 19.9998 12 19.9998L13.998 19.9998L14 25.9998C13.9999 27.5302 14.5846 29.0028 15.6345 30.1163C16.6844 31.2298 18.1202 31.9 19.6479 31.9898L20 31.9998L21 31.9998C22.8566 31.9998 24.637 31.2623 25.9497 29.9495C27.2625 28.6368 28 26.8563 28 24.9998L28 23.9998C28 23.4694 27.7893 22.9606 27.4142 22.5856C27.0392 22.2105 26.5304 21.9998 26 21.9998L24 21.9998C23.4696 21.9998 22.9608 22.2105 22.5858 22.5856C22.2107 22.9606 22 23.4694 22 23.9998L22.014 24.2338C22.0667 24.6802 22.2682 25.0959 22.5861 25.4138C22.9039 25.7316 23.3196 25.9331 23.766 25.9858L23.83 25.9898L23.79 26.1038C23.5686 26.6631 23.1842 27.143 22.6868 27.4811C22.1892 27.8192 21.6016 27.9999 21 27.9998L20 27.9998C19.4696 27.9998 18.9608 27.7891 18.5858 27.414C18.2107 27.0389 18 26.5302 18 25.9998L17.998 19.9998L26 19.9998C26.4899 19.9997 26.9626 19.8199 27.3287 19.4944C27.6948 19.1688 27.9287 18.7203 27.986 18.2338L28 17.9998C28 17.4694 27.7893 16.9606 27.4142 16.5856C27.0392 16.2105 26.5304 15.9998 26 15.9998L17.998 15.9998L18 13.2358C18 12.7398 17.9078 12.2481 17.728 11.7858L17.578 11.4478C17.1038 10.4989 16.272 9.77718 15.2657 9.4415Z"
+                stroke="#1DD100"
+                stroke-opacity="1.000000"
+                stroke-width="0.000000"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h3 class="text-3xl font-bold"><span>550</span> taka</h3>
+            <p class="text-gray-500">per seat</p>
+          </div>
+        </div>
+      </section>
+      <section id="ticket_section" class="section-3 mt-10 lg:flex justify-between p-5 lg:p-0 gap-10 items-center">
+        <div class="w-[80%]">
+          <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-start">Select Your Seat</h1>
+          </div>
+          <div
+            class="flex justify-between items-center text-bold text-slate-400 border-dashed border-t-2 mt-3 py-3 "
+          >
+            <div class="Unselected flex justify-center items-center gap-3">
+              <i class="fa-solid fa-chair"></i>
+              <p>Available</p>
+            </div>
+            <div
+              class="selected flex justify-center items-center gap-3 text-[rgb(29,209,0)] font-bold"
+            >
+              <i class="fa-solid fa-chair"></i>
+              <p>Selected</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row justify-end items-center mt-3 border-dotted border-t-2">
+            <div
+            class="bg-slate-300 hidden mt-3  text-gray-400 rounded-md lg:flex justify-center items-center p-3 w-[10%]"
+          >
+            <svg
+              width="26.000000"
+              height="26.000000"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs />
+              <path
+                id="Vector"
+                d="M1.91333 17.5922C2.5166 19.0481 3.40039 20.371 4.51465 21.4853C5.62891 22.5996 6.9519 23.4835 8.40771 24.0865C9.86377 24.6896 11.4241 25 13 25C14.5759 25 16.1362 24.6896 17.5923 24.0865C19.0481 23.4835 20.3711 22.5996 21.4854 21.4853C22.5996 20.371 23.4834 19.0481 24.0867 17.5922C24.6897 16.1363 25 14.5759 25 13C25 11.4241 24.6897 9.86371 24.0867 8.40781C23.4834 6.9519 22.5996 5.62903 21.4854 4.51471C20.3711 3.40042 19.0481 2.51651 17.5923 1.91345C16.1362 1.31039 14.5759 1 13 1C11.4241 1 9.86377 1.31039 8.40771 1.91345C6.9519 2.51651 5.62891 3.40042 4.51465 4.51471C3.40039 5.62903 2.5166 6.9519 1.91333 8.40781C1.3103 9.86371 1 11.4241 1 13C1 14.5759 1.3103 16.1363 1.91333 17.5922ZM11.1145 14.8856C11.6145 15.3857 12.2927 15.6667 13 15.6667C13.7073 15.6667 14.3855 15.3857 14.8855 14.8856C15.3857 14.3855 15.6667 13.7072 15.6667 13C15.6667 12.2928 15.3857 11.6145 14.8855 11.1144C14.3855 10.6143 13.7073 10.3333 13 10.3333C12.2927 10.3333 11.6145 10.6143 11.1145 11.1144C10.6143 11.6145 10.3333 12.2928 10.3333 13C10.3333 13.7072 10.6143 14.3855 11.1145 14.8856ZM13 15.6667L13 25M10.3333 13L1.33325 10.3333M15.6667 13L24.6667 10.3333"
+                stroke="#030712"
+                stroke-opacity="0.700000"
+                stroke-width="2.000000"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          </div>
+          <div class="flex justify-between  items-center mt-8  w-[100%]">
+            <div class="flex flex-col lg:gap-6">
+              <div class="num">1</div>
+              <div class="num">2</div>
+              <div class="num">3</div>
+              <div class="num">4</div>
+              <div class="num">5</div>
+              <div class="num">6</div>
+              <div class="num">7</div>
+              <div class="num">8</div>
+              <div class="num">9</div>
+              <div class="num">10</div>
+            </div>
+            <div class=" flex flex-col lg:gap-6">
+              <div class="sit_num">A1</div>
+              <div class="sit_num">B1</div>
+              <div class="sit_num">C1</div>
+              <div class="sit_num">D1</div>
+              <div class="sit_num">E1</div>
+              <div class="sit_num">F1</div>
+              <div class="sit_num">G1</div>
+              <div class="sit_num">H1</div>
+              <div class="sit_num">I1</div>
+              <div class="sit_num">J1</div>
+            </div >
+            <div class="flex flex-col lg:gap-6">
+              <div class="sit_num">A2</div>
+              <div class="sit_num">B2</div>
+              <div class="sit_num">C2</div>
+              <div class="sit_num">D2</div>
+              <div class="sit_num">E2</div>
+              <div class="sit_num">F2</div>
+              <div class="sit_num">G2</div>
+              <div class="sit_num">H2</div>
+              <div class="sit_num">I2</div>
+              <div class="sit_num">J2</div>
+            </div>
+            <div class="flex flex-col lg:gap-6">
+              <div class="sit_num">A3</div>
+              <div class="sit_num">B3</div>
+              <div class="sit_num">C3</div>
+              <div class="sit_num">D3</div>
+              <div class="sit_num">E3</div>
+              <div class="sit_num">F3</div>
+              <div class="sit_num">G3</div>
+              <div class="sit_num">H3</div>
+              <div class="sit_num">I3</div>
+              <div class="sit_num">J3</div>
+            </div>
+            <div class="flex flex-col lg:gap-6">
+              <div class="sit_num">A4</div>
+              <div class="sit_num">B4</div>
+              <div class="sit_num">C4</div>
+              <div class="sit_num">D4</div>
+              <div class="sit_num">E4</div>
+              <div class="sit_num">F4</div>
+              <div class="sit_num">G4</div>
+              <div class="sit_num">H4</div>
+              <div class="sit_num">I4</div>
+              <div class="sit_num">J4</div>
+            </div>
+          </div>
+        </div>
+        <div class="form_container">
+          <div>
+            <h1 class="text-2xl font-bold border-dotted border-b-2 p-3">Select Your Ticket</h1>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-5 space-y-4 mt-5">
+            <div class="flex justify-between items-center">
+              <p id="ticket_purchase_count" class="text-lg font-bold">Seat <span class="bg-[#1DD100] rounded-md px-2">0</span></p>
+              <p class="text-lg font-bold">Class</p>
+              <p class="text-lg font-bold">Price</p>
+            </div>
+            <div id="total_calculate" class="flex justify-between items-center pt-3">
+              <p id="sit_No" class="text-lg font-bold text-gray-400"></p>
+              <p id="economy" class="text-lg font-bold text-gray-400"></p>
+              <span id="ticket_price" class="text-lg font-bold text-gray-400"></span>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="text-lg font-bold">Total Price</p>
+              <p id="total_price" class="text-lg font-bold">BDT<span>0</span></p>
+            </div>
+            <div class="bg-white flex rounded-md p-1">
+              <input id="coupon_code" class="rounded-md outline-none" type="text" placeholder="Have any coupon?">
+              <button id="apply_btn" onclick="useCouponCode()" class="bg-[rgb(29,209,0)] text-white px-3 py-1 rounded-lg">Apply</button>
+            </div>
+            <div class="flex justify-between items-center">
+              <p  class="text-lg font-bold">Grand Total</p>
+              <p id="grand_total" class="text-lg font-bold">BDT <span>0</span></p>
+            </div>
+          </div>
+          <div>
+            <div class="mt-5">
+              <h3 class="text-start text-lg font-bold">Passenger Name :</h3>
+              <input class="text-start px-1  flex justify-start py-2 w-full rounded-lg border-2 outline-none" type="text" placeholder="Enter your name">
+            </div>
+            <div class="mt-5">
+              <h3 class="text-start text-lg font-bold">Passenger Number :</h3>
+              <input class="text-start px-1  flex justify-start py-2 w-full rounded-lg border-2 outline-none" type="number" placeholder="Enter your name">
+            </div>
+            <div class="mt-5">
+              <h3 class="text-start text-lg font-bold">Email ID :</h3>
+              <input class="text-start px-1  flex justify-start py-2 w-full rounded-lg border-2 outline-none" type="email" placeholder="Enter your name">
+            </div>
+            <div>
+              <button id="next_btn" class="btn btn-secondary bg-[rgb(29,209,0)] border-none w-full mt-3 outline-none">Next</button>
+            </div>
+            <div class="flex justify-evenly items-center text-sm mt-3 text-gray-400">
+              <p class="border-b-2">Terms and Conditions</p>
+              <p class="border-b-2">Cancellation Policy</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+     
+    <footer id="footer_section" class="lg:mt-32 bg-base-300 h-96 ">
+      <div class="footer_container py-5 lg:py-16 w-full">
+        <div class="flex flex-col lg:flex-row justify-between px-5 lg:px-52 items-center">
+          <div class="space-y-3 text-center">
+            <h1 class="text-3xl font-bold">E-Ticket</h1>
+            <p class="font-semibold">E-Ticket is a digital platform to make your <br> daily commuting better.</p>
+          </div>
+          <div class="space-y-1 lg:space-y-4">
+            <p class="text-lg font-bold">Download our app</p>
+            <div class="flex flex-col lg:flex-row justify-center items-center lg:gap-5 bg-white rounded-lg p-3">
+              <img src="images/playstore.png" alt="">
+            <span class="text-xl font-bold">playstore</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row justify-around items-center lg:p-16  font-bold">
+          <div>
+            <p>@all rights reserved, P-Ticket services limited.2024</p>
+          </div>
+          <div class="flex flex-col lg:flex-row justify-center items-center gap-4">
+            <span>Terms & condition</span>
+            <span>Return & refund policy</span>
+            <span>Privacy policy</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+      <div id="popUp_id" class="popUp_section p-5 lg:p-0 absolute top-60 lg:top-0   lg:left-72 lg:w-[60%] mx-5 lg:mx-0 lg:m-auto hidden  flex-col  justify-center items-center lg:h-[80vh] gap-6 rounded-lg shadow-2xl lg:my-20">
+        <img src="images/success.png" alt="">
+        <span class="text-[#1DD100] font-bold text-3xl">SUCCESS</span>
+        <p class="text-center text-lg font-semibold">Thank you for Booking Our Bus Seats. 
+          We are working hard to <br> find the best service and deals for you. 
+          </p>
+        <p>Shortly you will find a confirmation in your email.</p>
+        <button id="Continue_btn" class="btn btn-active bg-[#1DD100] w-80 text-lg text-white font-bold">Continue</button>
+      </div>
+      <script src="app.js"></script>
   </body>
 </html>

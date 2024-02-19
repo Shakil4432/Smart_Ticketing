@@ -1,0 +1,24 @@
+.num{
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+.sit_num{
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: rgb(247, 248, 248);
+}
+
+@media screen and (max-width:640px){
+    .num,.sit_num{
+        width: 70px;
+        height: 30px;
+    }
+}
