@@ -111,6 +111,9 @@ function useCouponCode(){
         grandTotal.innerText = total - discount;
         applyBtn.classList.add("hidden");
     }
+    else{
+        alert("Invalid coupon code");
+    }
 }
 
 const nextBtn  = document.getElementById("next_btn");
